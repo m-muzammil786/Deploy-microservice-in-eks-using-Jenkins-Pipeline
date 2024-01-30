@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: 587027614473.dkr.ecr.us-east-1.amazonaws.com/cicd-image-scanning-ecrdockerrepository-yhtgh5pmm1oj
+        image: 587027614473.dkr.ecr.us-east-1.amazonaws.com/jenkins-cicd-in-eks
         ports:
         - containerPort: 80
         imagePullPolicy: Always # Always  # or "IfNotPresent" or "Never"
