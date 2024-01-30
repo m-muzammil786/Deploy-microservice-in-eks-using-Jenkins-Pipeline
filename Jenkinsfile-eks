@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+   tools {
+        maven 'Maven3'
+    }
+    stages {
+        stage('First-Stage-Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/akannan1087/springboot-app']])
+            }
+        }
+        stage ('Build') {
+          steps {
+            sh 'mvn clean install'           
+            }
+        }
+    }
+}
